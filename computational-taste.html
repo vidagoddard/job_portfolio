@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="A small exploratory pilot comparing how two language models judge fashion descriptions and explain their choices.">
+    <title>Computational Taste — Vida Goddard</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header>
+      <div class="wrap nav"><a class="brand" href="index.html" aria-label="Vida Goddard home">Vida Goddard</a>
+        <nav aria-label="Main navigation"><a href="index.html">Selected work</a>
+          <a href="about.html">About & Résumé ↗</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="wrap project-detail">
+      <section class="about-hero">
+        <a class="text-link" href="index.html#work">← All selected work</a>
+        <div class="eyebrow">MA Digital Humanities · Exploratory study</div>
+        <h1>Computational Taste</h1>
+        <p class="intro">A small exploratory pilot comparing how two language models judge fashion descriptions and explain their choices.</p>
+        <div class="tags"><span class="tag">Exploratory work</span>
+          <span class="tag">LLM evaluation</span>
+          <span class="tag">Python</span>
+        </div>
+      </section>
+      <nav class="case-nav" aria-label="Case study sections"><a href="#question">Research question</a>
+        <a href="#method">How I ran the pilot</a>
+        <a href="#findings">What I observed</a>
+        <a href="#next">What I would test next</a>
+      </nav>
+      <section class="story-section" id="question">
+        <h2>Research question</h2>
+        <p>If two language models are asked to choose between outfit descriptions, how often do they agree, and what reasons do they give? I designed a pilot to examine how models express aesthetic preferences in text.</p>
+      </section>
+      <section class="story-section" id="method">
+        <h2>How I ran the pilot</h2>
+        <p>I wrote 30 pairs of outfit descriptions, changing one attribute within each pair, such as fabric, silhouette or style. I ran Mistral locally through Ollama and accessed Gemini 2.5 Flash through its API using Python. Each model judged all 30 pairs three times.</p>
+        <p>I requested a choice and a short rationale, parsed the responses as JSON and aggregated choices by majority vote. I tightened Mistral’s prompt after early outputs failed to follow the format. I compared preference rates and Cohen’s kappa, then reviewed examples where the models agreed, disagreed or varied across runs.</p>
+      </section>
+      <section class="story-section" id="findings">
+        <h2>What I observed</h2>
+        <p>Agreement was low in this pilot (Cohen’s κ = 0.051). Mistral selected option A much more often. Some rationales used recurring criteria such as drape, tailoring or timelessness, even when the two models chose different outfits.</p>
+        <p>The skew towards A raised a question about answer order. Because the pilot kept the order fixed, the results cannot isolate a position effect from the contents of the descriptions or the way the prompts were framed.</p>
+        <div class="linked-figure-pair">
+          <figure>
+            <a href="assets/taste-figure-1.png" target="_blank" rel="noopener noreferrer">
+            <img src="assets/taste-figure-1.png" alt="Figure 1 from the Computational Taste report" loading="lazy">
+            </a>
+            <figcaption>Pilot results · Figure 1 · Select image to enlarge.</figcaption>
+          </figure>
+          <figure>
+            <a href="assets/taste-figure-2.png" target="_blank" rel="noopener noreferrer">
+            <img src="assets/taste-figure-2.png" alt="Figure 2 from the Computational Taste report" loading="lazy">
+            </a>
+            <figcaption>Pilot results · Figure 2 · Select image to enlarge.</figcaption>
+          </figure>
+        </div>
+        <figure>
+          <a href="assets/taste-figure-3.png" target="_blank" rel="noopener noreferrer">
+          <img src="assets/taste-figure-3.png" alt="Figure 3 from the Computational Taste report" loading="lazy">
+          </a>
+          <figcaption>Pilot results · Figure 3 · Select image to enlarge.</figcaption>
+        </figure>
+      </section>
+      <section class="story-section" id="next">
+        <h2>What I would test next</h2>
+        <p>I would swap A and B within each pair, use a larger and more varied set of descriptions, and compare the responses with judgements from several people. I would also keep prompt constraints aligned across models and record any deviations. This would help distinguish position effects, prompt sensitivity and differences in how the descriptions are judged.</p>
+      </section>
+      <div class="actions project-end">
+        <a class="button" href="index.html#work">← All selected work</a>
+      </div>
+    </main>
+    <footer class="contact-footer minimal-contact">
+      <div class="wrap footer-reference-grid">
+        <div class="footer-identity">
+          <h2>Vida Goddard</h2>
+        </div>
+        <div class="footer-contact-column">
+          <h3>Contact</h3>
+          <address><span>London, UK</span><a href="mailto:goddard.vida@gmail.com">goddard.vida@gmail.com</a>
+            <a href="https://www.linkedin.com/in/vida-goddard-931a6939b" target="_blank" rel="noopener noreferrer" aria-label="Vida Goddard on LinkedIn">LinkedIn ↗</a>
+          </address>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

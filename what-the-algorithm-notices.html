@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="I used fashion image embeddings to investigate which visual similarities a computer vision model picks up and which cultural distinctions are harder to recover.">
+    <title>What the Algorithm Notices — Vida Goddard</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header>
+      <div class="wrap nav"><a class="brand" href="index.html" aria-label="Vida Goddard home">Vida Goddard</a>
+        <nav aria-label="Main navigation"><a href="index.html">Selected work</a>
+          <a href="about.html">About & Résumé ↗</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="wrap project-detail">
+      <section class="about-hero">
+        <a class="text-link" href="index.html#work">← All selected work</a>
+        <div class="eyebrow">MA Digital Humanities · Computer vision research</div>
+        <h1>What the Algorithm Notices</h1>
+        <p class="intro">I used fashion image embeddings to investigate which visual similarities a computer vision model picks up and which cultural distinctions are harder to recover.</p>
+        <div class="tags"><span class="tag">ResNet50</span>
+          <span class="tag">Python &amp; Keras</span>
+          <span class="tag">PCA, UMAP &amp; t-SNE</span>
+        </div>
+      </section>
+      <nav class="case-nav" aria-label="Case study sections"><a href="#question">Research question</a>
+        <a href="#method">From images to a visual map</a>
+        <a href="#findings">What the projections showed</a>
+        <a href="#reflection">What I would test next</a>
+      </nav>
+      <section class="story-section" id="question">
+        <h2>Research question</h2>
+        <p>When fashion photographs are mapped by visual similarity, what puts two garments next to each other? I wanted to see whether a general-purpose model would distinguish culturally specific garments, or group them mainly by visible features such as shape and body coverage.</p>
+        <p>I curated a target sample of 3,000 catalogue images, balanced between South Asian garments and a comparison group called “universal” in the study. I used catalogue categories to build the groups. Those labels reflect the source catalogue and its assumptions about what counts as a default garment.</p>
+      </section>
+      <section class="story-section" id="method">
+        <h2>From images to a visual map</h2>
+        <ol class="process-list">
+          <li><strong>Curate the image set.</strong> I matched catalogue images to metadata, selected garments by category and used contact sheets to inspect the corpus.</li>
+          <li><strong>Extract features.</strong> I used pretrained ResNet50 in Keras to turn each image into a 2,048-dimensional vector.</li>
+          <li><strong>Compare projections.</strong> I mapped the embeddings to two dimensions with PCA, UMAP and t-SNE, then used catalogue attributes and image thumbnails to interpret the groupings.</li>
+        </ol>
+        <figure>
+          <a href="assets/fashion-sprite-sheet.png" target="_blank" rel="noopener noreferrer">
+          <img src="assets/fashion-sprite-sheet.png" alt="Grid of catalogue garment photographs used in the visualisation" loading="lazy">
+          </a>
+          <figcaption>Garment image contact sheet · Select image to enlarge.</figcaption>
+        </figure>
+      </section>
+      <section class="story-section" id="findings">
+        <h2>What the projections showed</h2>
+        <p>In UMAP and t-SNE, garment length and body coverage helped explain several groupings. Some tunics and kurtas appeared near Western tops or dresses, while sarees formed a more distinct group in UMAP. Images of garments photographed without a model also appeared in separate groups. That suggested the way a garment was photographed mattered alongside its shape.</p>
+        <p>PCA gave a complementary view of broad variation in the dataset. Comparing all three projections helped me distinguish patterns that recurred from patterns that depended on a particular mapping.</p>
+        <div class="linked-figure-pair">
+          <figure>
+            <a href="assets/fashion-umap.png" target="_blank" rel="noopener noreferrer">
+            <img src="assets/fashion-umap.png" alt="UMAP projection of fashion image embeddings" loading="lazy">
+            </a>
+            <figcaption>UMAP projection · Select image to enlarge.</figcaption>
+          </figure>
+          <figure>
+            <a href="assets/fashion-tsne.png" target="_blank" rel="noopener noreferrer">
+            <img src="assets/fashion-tsne.png" alt="t-SNE projection of fashion image embeddings" loading="lazy">
+            </a>
+            <figcaption>t-SNE projection · Select image to enlarge.</figcaption>
+          </figure>
+        </div>
+        <figure>
+          <a href="assets/fashion-pca.png" target="_blank" rel="noopener noreferrer">
+          <img src="assets/fashion-pca.png" alt="PCA projection of fashion image embeddings" loading="lazy">
+          </a>
+          <figcaption>PCA projection · Select image to enlarge.</figcaption>
+        </figure>
+      </section>
+      <section class="story-section" id="reflection">
+        <h2>What I would test next</h2>
+        <p>The visualisations help surface patterns in this corpus. They cannot establish that the model understands a garment’s cultural meaning. Product photography, inconsistent labels and the model’s training data all affect how the map can be interpreted.</p>
+        <p>I would verify a sample of catalogue labels by hand and compare ResNet50 with a fashion-specific or image-and-text model. That would help test whether the same groupings recur when the model has access to more context.</p>
+      </section>
+      <div class="actions project-end">
+        <a class="button" href="index.html#work">← All selected work</a>
+      </div>
+    </main>
+    <footer class="contact-footer minimal-contact">
+      <div class="wrap footer-reference-grid">
+        <div class="footer-identity">
+          <h2>Vida Goddard</h2>
+        </div>
+        <div class="footer-contact-column">
+          <h3>Contact</h3>
+          <address><span>London, UK</span><a href="mailto:goddard.vida@gmail.com">goddard.vida@gmail.com</a>
+            <a href="https://www.linkedin.com/in/vida-goddard-931a6939b" target="_blank" rel="noopener noreferrer" aria-label="Vida Goddard on LinkedIn">LinkedIn ↗</a>
+          </address>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
