@@ -3,104 +3,105 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="About Vida Goddard: education, experience, skills and languages across digital humanities and human-centred design.">
-    <title>About & Résumé — Vida Goddard</title>
+    <meta name="description" content="Vida Goddard's portfolio: human-centred design, explainable AI and digital humanities research.">
+    <title>Vida Goddard — Research & Design</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer>
     </script>
   </head>
-  <body>
-    <a class="skip" href="#main">Skip to content</a>
+  <body><a class="skip" href="#main">Skip to content</a>
     <header>
-      <div class="wrap nav">
-        <a class="brand" href="index.html" aria-label="Vida Goddard home">Vida Goddard</a>
-        <nav aria-label="Main navigation">
-          <a href="index.html#work">Selected work</a>
-          <a href="about.html" aria-current="page">About & Résumé ↗</a>
+      <div class="wrap nav"><a class="brand" href="index.html" aria-label="Vida Goddard home">Vida Goddard</a>
+        <nav aria-label="Main navigation"><a href="index.html" aria-current="page">Selected work</a>
+          <a href="about.html">About & Résumé ↗</a>
         </nav>
       </div>
     </header>
     <main id="main" class="wrap">
-      <section class="about-hero about-introduction">
-        <div class="eyebrow">A little about me</div>
-        <h1>Hello, I’m Vida Goddard.<br>Curious about people, culture & <em>digital life.</em>
-        </h1>
-        <p class="intro">I am a Digital Humanities graduate working across cultural research, applied AI and human-centred design. My background in languages, film and media informs how I study the ways digital systems organise information and shape what people discover.</p>
-        <p class="intro">During my MA, I integrated AI models into Python workflows, compared local and API-based language models, and used image embeddings to explore how computer vision groups fashion images. For my dissertation, I built Rewear, an explainable recommender that shows why a second-hand garment matches a the preferences of a shopper.</p>
-      </section>
-      <section class="resume">
-        <h2>Education</h2>
-        <div>
-          <div class="entry">
-            <h3>MA Digital Humanities</h3>
-            <p>King’s College London · 2025–2026</p>
-          </div>
-          <div class="entry">
-            <h3>BA French and Film & Media</h3>
-            <p>Birkbeck, University of London · 2022–2025</p>
+      <section class="hero hero-with-portrait">
+        <div class="hero-portrait"><img src="assets/human-circuitry.png" alt="Human silhouette filled with digital circuitry" width="750" height="750">
+        </div>
+        <div class="hero-copy">
+          <div class="eyebrow">Vida Goddard / Digital humanities · Research · Design</div>
+          <h1>Curiosity-led research.<br>Design with <em>people<br>in mind.</em>
+          </h1>
+          <p class="intro">I explore how digital experiences shape our choices, connect us to culture, and help us make sense of information.</p>
+          <div class="actions"><a class="button" href="#work">Explore my work <span aria-hidden="true">↘</span></a>
+            <a class="button secondary" href="about.html">A little about me</a>
           </div>
         </div>
       </section>
-      <section class="resume">
-        <h2>Leadership<br>& Experience</h2>
-        <div>
-          <div class="entry">
-            <h3>Student Representative</h3>
-            <p>King’s College London</p>
-            <p>Represented student perspectives, communicated with academic staff and supported constructive dialogue across the department.</p>
-          </div>
-          <div class="entry">
-            <h3>Collaborative Project Coordination</h3>
-            <p>Rewritten · King’s College London</p>
-            <p>Helped coordinate an interdisciplinary team, align responsibilities with individual strengths and deliver a shared digital design project.</p>
-          </div>
-        </div>
-      </section>
-      <section class="resume">
-        <h2>Skills & Tools</h2>
-        <dl class="skill-categories">
-          <div>
-            <dt>Research &amp; Critical Analysis</dt>
-            <dd>Qualitative research, cultural analysis, media analysis, comparative research</dd>
-          </div>
-          <div>
-            <dt>UX &amp; Product Design</dt>
-            <dd>Figma, information architecture, prototyping, user flows</dd>
-          </div>
-          <div>
-            <dt>Storytelling &amp; Visual Communication</dt>
-            <dd>Storytelling, visual storytelling, narrative development, visual literacy</dd>
-          </div>
-          <div>
-            <dt>Applied AI</dt>
-            <dd>AI model integration in Python (BERT, ResNet50 with Keras, Ollama and LLM APIs), LLM evaluation and bias analysis, image embeddings and visualisation, explainable recommenders</dd>
-          </div>
-          <div>
-            <dt>Data &amp; Technology</dt>
-            <dd>Python, pandas, Pillow, Streamlit, API analysis, HTML/CSS</dd>
-          </div>
-          <div>
-            <dt>Collaboration &amp; Communication</dt>
-            <dd>Project coordination, stakeholder communication, intercultural communication</dd>
-          </div>
-        </dl>
-      </section>
-      <section class="resume">
-        <h2>Languages</h2>
-        <div class="languages">
-          <div>English <span>Bilingual</span>
-          </div>
-          <div>French <span>Bilingual</span>
-          </div>
-          <div>Serbian <span>C1</span>
-          </div>
-          <div>German <span>B2</span>
-          </div>
-        </div>
-      </section>
-      <div class="resume-download">
-        <a class="button" href="assets/Vida-Goddard-Resume.pdf" download="Vida-Goddard-Resume.pdf">Download résumé PDF ↓</a>
+      <div class="ticker"><span>Human-centred design</span>
+        <span>Critical digital research</span>
+        <span>Thoughtful technology</span>
       </div>
+      <section id="work" aria-labelledby="work-heading">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">A closer look</div>
+            <h2 id="work-heading">Selected work<span style="color:var(--plum)">.</span>
+            </h2>
+          </div>
+          <div class="filters" aria-label="Filter projects"><button class="filter" data-filter="all" aria-pressed="true">All work</button><button class="filter" data-filter="design" aria-pressed="false">UX & Design</button><button class="filter" data-filter="research" aria-pressed="false">Data & Research</button>
+          </div>
+        </div>
+        <p id="filter-status" class="small" role="status">5 projects</p>
+        <div class="projects">
+          <article class="project" data-category="design research"><a class="project-image" href="rewear.html"><span class="project-number">01 / DESIGNING FOR AUTONOMY</span><img src="assets/rewear-home.jpg" alt="Rewear Figma homepage showing intentional search and previous searches" width="700" height="500"></a>
+            <div class="tags"><span class="tag">UX/UI Design</span>
+              <span class="tag">Explainable AI</span>
+              <span class="tag">MA Dissertation</span>
+            </div>
+            <h3>Rewear</h3>
+            <p>Rethinking second-hand fashion discovery through transparency, reflection and user control.</p><a class="case-link" href="rewear.html">Explore the case study <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project" data-category="research"><a class="project-image archive" href="europeana.html"><span class="project-number">02 / MAKING CULTURE DISCOVERABLE</span><img src="assets/europeana-cover.jpg" alt="Europeana Fashion cover with archival fashion portraits in a sculptural letterform" width="864" height="1240"></a>
+            <div class="tags"><span class="tag">Metadata analysis</span>
+              <span class="tag">APIs & Linked Data</span>
+              <span class="tag">Digital Humanities</span>
+            </div>
+            <h3>Europeana Fashion</h3>
+            <p>A critical investigation into how metadata shapes the discovery and reuse of fashion heritage.</p><a class="case-link" href="europeana.html">Explore the case study <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project" data-category="design"><a class="project-image rewritten-cover" href="rewritten.html"><span class="project-number">03 / CONNECTING COMMUNITIES</span><img src="assets/rewritten-cover.png" loading="lazy" alt="Rewritten East London: Digital Archives of East London cover" width="1024" height="572"></a>
+            <div class="tags"><span class="tag">UX Design</span>
+              <span class="tag">Cultural Heritage</span>
+              <span class="tag">Project Coordination</span>
+            </div>
+            <h3>Rewritten</h3>
+            <p>Connecting Communities Challenge · Digital Product Development · Cultural Heritage &amp; Creative Sector</p><a class="case-link" href="rewritten.html">Explore the case study <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project" data-category="research">
+            <a class="project-image" href="what-the-algorithm-notices.html">
+            <img src="assets/algorithm-tsne-cover.png" alt="t-SNE projection showing clusters of fashion images" loading="lazy">
+            </a>
+            <div class="tags"><span class="tag">Computer Vision</span>
+              <span class="tag">Image Embeddings</span>
+            </div>
+            <h3>What the Algorithm Notices</h3>
+            <p>A visual investigation of how a pretrained model groups fashion images.</p>
+            <a class="case-link" href="what-the-algorithm-notices.html">Explore the case study <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project" data-category="research">
+            <a class="project-image" href="computational-taste.html">
+            <img src="assets/computational-taste-cover.webp" alt="Editorial fashion image of a garment illuminated with blue light" loading="lazy">
+            </a>
+            <div class="tags"><span class="tag">Exploratory Study</span>
+              <span class="tag">LLM Evaluation</span>
+            </div>
+            <h3>Computational Taste</h3>
+            <p>A small pilot comparing fashion judgements from a local and an API-based language model.</p>
+            <a class="case-link" href="computational-taste.html">Explore the case study <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </section>
+      <section class="about-strip">
+        <div>
+          <div class="eyebrow">The person behind the projects</div>
+          <h2>A humanities perspective.<br>A digital toolkit.</h2><a class="text-link" href="about.html">Meet me ↗</a>
+        </div>
+        <p class="intro">My background brings together languages, film and media, and digital humanities. I’m interested in the space where thoughtful research becomes a clearer, more considerate digital experience.</p>
+      </section>
     </main>
     <footer class="contact-footer minimal-contact">
       <div class="wrap footer-reference-grid">
@@ -109,9 +110,7 @@
         </div>
         <div class="footer-contact-column">
           <h3>Contact</h3>
-          <address>
-            <span>London, UK</span>
-            <a href="mailto:goddard.vida@gmail.com">goddard.vida@gmail.com</a>
+          <address><span>London, UK</span><a href="mailto:goddard.vida@gmail.com">goddard.vida@gmail.com</a>
             <a href="https://www.linkedin.com/in/vida-goddard-931a6939b" target="_blank" rel="noopener noreferrer" aria-label="Vida Goddard on LinkedIn">LinkedIn ↗</a>
           </address>
         </div>
